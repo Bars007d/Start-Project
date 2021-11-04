@@ -1,0 +1,166 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  @extend %montserrat-400;
+  background-color: $color-white;
+  color: $color-black;
+  line-height: 1.3;
+  font-size: $font-body;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+h2 {
+  color: $color-black;
+  @extend %montserrat-600;
+  font-size: $font-h2;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1290px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: block;
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: $border-radius-10px;
+  padding: 15px 30px;
+  font-weight: 600;
+  position: relative;
+  z-index: 0;
+  transition: background-color 0.6s;
+
+  &:hover {
+    background-color: $color-orange;
+  }
+
+  &:disabled {
+    border: transparent;
+    background-color: transparent;
+  }
+}
+
+.arrow {
+  color: $color-black;
+  transition: color 0.3s, fill 0.3s;
+
+  :hover {
+    color: $color-orange;
+
+    svg {
+      path {
+        fill: $color-orange;
+      }
+    }
+
+  }
+
+  :disabled {
+    color: $color-gray-500;
+
+    svg {
+      path {
+        fill: $color-gray-500;
+      }
+    }
+  }
+}
+
+.social {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #FFF8EB;
+  border-radius: $border-radius;
+  transition: background-color 0.3s, fill 0.3s;
+  svg {
+    path {
+      fill: $color-orange
+    }
+  }
+
+  &:hover {
+    background-color: $color-orange;
+
+    svg {
+      path {
+        fill: $color-white;
+      }
+    }
+  }
+}
+
+
+.button-all {
+  padding: 8px 10px;
+  background-color: $color-gray-100;
+  color: $color-gray-800;
+  @extend %montserrat-600;
+  border-radius: $border-radius;
+  transition: background-color 0.3s, color 0.3s;
+  :hover {
+    background-color: #FFF8EB;
+    color: $color-orange;
+  }
+  :active {
+    background-color: $color-orange;
+    color: $color-white;
+  }
+}
+
+input {
+  padding: 15px;
+  background-color: $color-white;
+  border: 1px solid $color-gray-100;
+  color: $color-black;
+  ::placeholder {
+    @extend %montserrat-500;
+    color: $color-gray-100;
+  }
+  :focus {
+    border: $color-black;
+  }
+}
+
+
+
+
+.error {
+  border: 2px #ff4019 solid;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: var(--color-orange-200);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.error {
+  border: 2px #ff4019 solid; // stylelint-disable-line declaration-no-important
+}
+
+
+.main {
+  flex-grow: 1;
+}
